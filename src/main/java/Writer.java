@@ -1,3 +1,5 @@
+import com.sun.tools.javac.util.StringUtils;
+
 import java.util.*;
 public class Writer {
     private ArrayList<ComponentSyntactic> components;
@@ -18,16 +20,25 @@ public class Writer {
         this.view.print("Valor del predicado: (verbo, complemento directo)");
         this.view.print(predicate.getVerb() + " " + predicate.getDirectComplement() );
     }
+    private void writeIndirectComplement(IndirectComplement complement){
+        this.view.print("Valor del complemento indirecto: (a quien,  quienes mas)");
+        this.view.print(complement.getToWho() + "  , " + String.join(" y ", complement.getWhoElse()));
+    }
 
     public void writeComplements(){
         this.components.forEach(component -> {
+            view.print(component.getType());
             switch (component.getType()){
-                case "predicate":
+                case "Predicate":
                     this.writePredicate((Predicate) component);
                     break;
 
-                case "subject":
+                case "Subject":
                     this.writeSubject((Subject) component);
+                    break;
+
+                default:
+                    this.writeIndirectComplement((IndirectComplement) component);
                     break;
 
             }
