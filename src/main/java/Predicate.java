@@ -25,8 +25,4 @@ public class Predicate extends ComponentSyntactic{
         this.directComplement = directComplement;
     }
 
-    @Override
-    Boolean derivatives(ComponentSyntactic component) {
-        return component.getType().equalsIgnoreCase("IndirectComplement");
-    }
 }

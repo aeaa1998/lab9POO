@@ -14,8 +14,4 @@ public class Subject extends ComponentSyntactic{
         this.value = value;
     }
 
-    @Override
-    Boolean derivatives(ComponentSyntactic component) {
-        return null;
-    }
 }

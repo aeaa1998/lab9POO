@@ -26,8 +26,4 @@ public class IndirectComplement extends ComponentSyntactic{
         this.whoElse = whoElse;
     }
 
-    @Override
-    Boolean derivatives(ComponentSyntactic component) {
-        return null;
-    }
 }
