@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 
 abstract class ComponentSyntactic {
     private String type;
@@ -15,7 +14,7 @@ abstract class ComponentSyntactic {
             if (components.get(i).getType().equalsIgnoreCase(this.getType()))
                 key = i;
         }
-        return (key != (components.size() - 1)) && components.get(key + 1).getType().equalsIgnoreCase(component.getType());
+        return (key != (components.size() -1) && (component.getType().equalsIgnoreCase(components.get(key + 1).getType())));
     };
 
     String getType() {

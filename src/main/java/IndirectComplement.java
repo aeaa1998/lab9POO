@@ -1,6 +1,6 @@
 public class IndirectComplement extends ComponentSyntactic{
-    String toWho;
-    String[] whoElse;
+    private String toWho;
+    private String[] whoElse;
 
     public IndirectComplement(String toWho, String[] whoElse) {
         super();

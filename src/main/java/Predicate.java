@@ -1,6 +1,6 @@
 public class Predicate extends ComponentSyntactic{
-    String verb;
-    String directComplement;
+    private String verb;
+    private String directComplement;
 
     public Predicate(String verb, String directComplement) {
         super();
@@ -25,4 +25,6 @@ public class Predicate extends ComponentSyntactic{
         this.directComplement = directComplement;
     }
 
-}
+
+    }
+

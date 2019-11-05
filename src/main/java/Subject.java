@@ -1,5 +1,5 @@
 public class Subject extends ComponentSyntactic{
-    String value;
+    private String value;
 
     public Subject(String value) {
         super();
