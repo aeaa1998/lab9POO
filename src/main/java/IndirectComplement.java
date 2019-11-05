@@ -3,9 +3,11 @@ public class IndirectComplement extends ComponentSyntactic{
     String[] whoElse;
 
     public IndirectComplement(String toWho, String[] whoElse) {
+        super();
+
         this.toWho = toWho;
         this.whoElse = whoElse;
-        this.setType(this.getClass().getName());
+//        this.setType(this.getClass().getName());
     }
 
     public String getToWho() {
@@ -22,5 +24,10 @@ public class IndirectComplement extends ComponentSyntactic{
 
     public void setWhoElse(String[] whoElse) {
         this.whoElse = whoElse;
+    }
+
+    @Override
+    Boolean derivatives(ComponentSyntactic component) {
+        return null;
     }
 }

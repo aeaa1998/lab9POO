@@ -1,11 +1,22 @@
-public class ComponentSyntactic {
+abstract class ComponentSyntactic {
     private String type;
 
-    public String getType() {
+    ComponentSyntactic() {
+        this.type = this.getClass().getName();
+
+    }
+
+    abstract Boolean derivatives(ComponentSyntactic component);
+
+    String getType() {
         return type;
     }
 
-    public void setType(String type) {
+
+
+    private void setType(String type) {
         this.type = type;
     }
+
+
 }

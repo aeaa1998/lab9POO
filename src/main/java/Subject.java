@@ -2,8 +2,8 @@ public class Subject extends ComponentSyntactic{
     String value;
 
     public Subject(String value) {
+        super();
         this.value = value;
-        this.setType(this.getClass().getName());
     }
 
     public String getValue() {
@@ -12,5 +12,10 @@ public class Subject extends ComponentSyntactic{
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    @Override
+    Boolean derivatives(ComponentSyntactic component) {
+        return null;
     }
 }

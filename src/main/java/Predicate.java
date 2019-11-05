@@ -3,9 +3,10 @@ public class Predicate extends ComponentSyntactic{
     String directComplement;
 
     public Predicate(String verb, String directComplement) {
+        super();
+
         this.verb = verb;
         this.directComplement = directComplement;
-        this.setType(this.getClass().getName());
     }
 
     public String getVerb() {
@@ -22,5 +23,10 @@ public class Predicate extends ComponentSyntactic{
 
     public void setDirectComplement(String directComplement) {
         this.directComplement = directComplement;
+    }
+
+    @Override
+    Boolean derivatives(ComponentSyntactic component) {
+        return component.getType().equalsIgnoreCase("IndirectComplement");
     }
 }
